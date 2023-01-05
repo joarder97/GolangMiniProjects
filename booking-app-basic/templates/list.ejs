@@ -1,0 +1,32 @@
+<!-- Show All Guest List -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest List</title>
+</head>
+<body>
+    <h1>Guest List</h1>
+    <div class="guestList">
+        <table border="1">
+            <tr>
+                <th>Name</th>
+            </tr>
+            {{range .}}
+            <tr>
+                <td>{{.Name}}</td>
+            </tr>
+            {{end}}
+        </table>
+    </div>
+    </body>
+    <br>
+    <div>
+        <form method="get" action="/">
+            <input type="submit" value="Back">
+        </form>
+    </div>
+</body>
+</html>

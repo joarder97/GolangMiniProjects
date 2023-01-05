@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking App</title>
+</head>
+    <body>
+        <h1>Booking App</h1>
+        <!-- left sidear for name input -->
+        <div class="left">
+            <h2>Enter your name</h2>
+            <form action="/insert" method="POST">
+                <input type="text" name="name" placeholder="Enter your name">
+                <input type="submit" value="Book">
+            </form>
+        </div>
+
+        <div class="right">
+            <h2>Remaining Tickets: {{.remainingTickets}}</h2>
+        </div>
+
+        <div class="right">
+            <form method="get" action="/list">
+                <input type="submit" value="Show Guest List">
+        </div>
+    </body>
+</html>
