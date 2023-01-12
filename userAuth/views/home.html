@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <p>Welcome {{.UserId}}</p>
+    <!-- table containing username, email, profile pic and edit/delete buttons -->
+    <form method="post" action="/editUser" enctype="multipart/form-data">
+        <table border="1">
+        <tr>
+            <th>UserId</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Profile Picture</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr>
+            <td><div><input type="text" id="userid" name="userid" value="{{.UserId}}" disabled></div></td>
+            <td><div><input type="text" id="username" name="username" value="{{.Name}}"> </div></td>
+            <td><input type="text" id="email" name="email" value="{{.Email}}"></td>
+            <td><div><img src="/images/download.jpg"  alt="Profile Picture"></div></td>
+            <td><div><button type="submit"><a>Edit</a></button></div></td>
+            <td><div><a href="/delete/{{.UserId}}">Delete</a></div></td>
+        </tr>
+    </table>
+    </form>
+    <br>
+    <a href="/logout">Logout</a>
+</html>
